@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HSam E-Learning — Web Development</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['"Space Grotesk"', 'sans-serif'],
+          sans: ['Inter', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  .font-display { font-family: 'Space Grotesk', sans-serif; }
+  .blob {
+    filter: blur(90px);
+  }
+</style>
+</head>
+<body class="bg-[#0B1220] text-slate-200 antialiased overflow-x-hidden">
+
+  <!-- BACKGROUND BLOBS -->
+  <div class="fixed inset-0 -z-10 overflow-hidden">
+    <div class="blob absolute -top-40 -left-40 w-[500px] h-[500px] bg-blue-600/30 rounded-full"></div>
+    <div class="blob absolute top-1/3 -right-40 w-[500px] h-[500px] bg-amber-500/20 rounded-full"></div>
+    <div class="blob absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-indigo-600/20 rounded-full"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 backdrop-blur-lg bg-[#0B1220]/70 border-b border-white/10">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-amber-400"></div>
+        <span class="font-display font-bold text-white">HSam E-Learning</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8 text-sm text-slate-400">
+        <a href="#features" class="hover:text-white transition">Formations</a>
+        <a href="#stats" class="hover:text-white transition">Résultats</a>
+        <a href="#cta" class="hover:text-white transition">Contact</a>
+      </div>
+      <button class="px-4 py-2 rounded-full bg-white text-[#0B1220] text-sm font-semibold hover:bg-slate-200 transition">
+        S'inscrire
+      </button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="max-w-6xl mx-auto px-6 pt-24 pb-32 text-center">
+    <span class="inline-block px-4 py-1.5 rounded-full text-xs font-medium bg-white/5 border border-white/10 text-slate-300 mb-6">
+      Nouvelle session — Web Development Track
+    </span>
+    <h1 class="font-display font-bold text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white max-w-4xl mx-auto">
+      Apprends le développement web
+      <span class="bg-gradient-to-r from-blue-400 via-sky-300 to-amber-300 bg-clip-text text-transparent">
+        comme un ingénieur.
+      </span>
+    </h1>
+    <p class="mt-6 text-lg text-slate-400 max-w-xl mx-auto">
+      HTML, CSS, Tailwind, Node.js et SQL — un parcours complet, coaché par Hind Samet, Computer Science Engineer.
+    </p>
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+      <button class="px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold
+                     hover:from-blue-400 hover:to-blue-500 transition shadow-lg shadow-blue-600/30">
+        Commencer maintenant
+      </button>
+      <button class="px-6 py-3 rounded-full border border-white/15 text-slate-200 font-semibold
+                     hover:bg-white/5 transition">
+        Voir le programme
+      </button>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section id="stats" class="max-w-4xl mx-auto px-6 pb-24">
+    <div class="grid grid-cols-3 divide-x divide-white/10 rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm">
+      <div class="text-center py-8">
+        <p class="font-display text-3xl md:text-4xl font-bold text-white">120+</p>
+        <p class="text-sm text-slate-400 mt-1">Étudiants</p>
+      </div>
+      <div class="text-center py-8">
+        <p class="font-display text-3xl md:text-4xl font-bold text-white">8</p>
+        <p class="text-sm text-slate-400 mt-1">Modules</p>
+      </div>
+      <div class="text-center py-8">
+        <p class="font-display text-3xl md:text-4xl font-bold text-white">4.9<span class="text-amber-400">★</span></p>
+        <p class="text-sm text-slate-400 mt-1">Note moyenne</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="max-w-6xl mx-auto px-6 pb-24">
+    <h2 class="font-display text-3xl md:text-4xl font-bold text-white text-center">
+      Ce que tu vas apprendre
+    </h2>
+    <div class="grid md:grid-cols-3 gap-6 mt-12">
+
+      <div class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6
+                  hover:bg-white/[0.06] hover:-translate-y-1 transition-all duration-300">
+        <div class="w-12 h-12 rounded-xl bg-blue-500/15 flex items-center justify-center text-2xl mb-4">🎨</div>
+        <h3 class="font-display font-semibold text-lg text-white">Tailwind CSS</h3>
+        <p class="text-sm text-slate-400 mt-2 leading-relaxed">
+          Construis des interfaces modernes et responsives sans écrire de CSS custom.
+        </p>
+      </div>
+
+      <div class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6
+                  hover:bg-white/[0.06] hover:-translate-y-1 transition-all duration-300">
+        <div class="w-12 h-12 rounded-xl bg-amber-500/15 flex items-center justify-center text-2xl mb-4">⚙️</div>
+        <h3 class="font-display font-semibold text-lg text-white">Node.js & Express</h3>
+        <p class="text-sm text-slate-400 mt-2 leading-relaxed">
+          Développe des APIs robustes et des backends scalables en JavaScript.
+        </p>
+      </div>
+
+      <div class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6
+                  hover:bg-white/[0.06] hover:-translate-y-1 transition-all duration-300">
+        <div class="w-12 h-12 rounded-xl bg-indigo-500/15 flex items-center justify-center text-2xl mb-4">🗄️</div>
+        <h3 class="font-display font-semibold text-lg text-white">SQL & MongoDB</h3>
+        <p class="text-sm text-slate-400 mt-2 leading-relaxed">
+          Maîtrise les bases de données relationnelles et NoSQL de A à Z.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="max-w-4xl mx-auto px-6 pb-28">
+    <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-blue-600 to-indigo-700 p-10 md:p-14 text-center">
+      <div class="absolute -top-20 -right-20 w-64 h-64 bg-amber-400/30 rounded-full blur-3xl"></div>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-white relative">
+        Prêt à commencer ta formation ?
+      </h2>
+      <p class="text-blue-100 mt-3 relative">
+        Rejoins la prochaine session HSam E-Learning dès aujourd'hui.
+      </p>
+      <button class="relative mt-8 px-7 py-3 rounded-full bg-white text-blue-700 font-semibold
+                     hover:bg-blue-50 transition">
+        Je m'inscris
+      </button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 py-8 text-center text-sm text-slate-500">
+    HSam E-Learning — Guide by Hind Sameut, Computer Science Engineer.
+  </footer>
+
+</body>
+</html>
